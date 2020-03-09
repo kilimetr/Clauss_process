@@ -1,12 +1,13 @@
 # author Dominik Capkovic 
 # contact: domcapkovic@gmail.com; https://www.linkedin.com/in/dominik-čapkovič-b0ab8575/
 # GitHub: https://github.com/kilimetr
+# Description: NIST regresion of cp
 
 import numpy as np
 import matplotlib.pyplot as plt
 
 
-def poly_regres(coeff, Trange, order):
+def poly_regres_cp(coeff, Trange, order):
 	T = np.linspace(Trange[0], Trange[1], Trange[2])
 
 	TT = T/1000 # NIST condition
