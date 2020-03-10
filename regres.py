@@ -87,6 +87,22 @@ H2O_coef_dH = poly_regres_dH(coef_dH, Trange, order)
 
 
 
+A  = 33.51313
+B  = 5.065360
+C  = -1.059670
+D  = 0.089905	
+E  = -0.211911
+F  = 117.6855
+H  = 128.6003
+dH = 128.60
+coef_cp = [A, B, C, D, E]
+coef_dH = [A, B, C, D, E, F, H, dH]
+
+S2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
+S2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+
+
+
 A  = -0.703029
 B  = 108.4773
 C  = -42.52157
