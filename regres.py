@@ -22,6 +22,8 @@ Trange = [Tmin, Tmax, Tstep]
 
 order = 3
 
+plottt = False
+
 
 A  = 26.88412
 B  = 18.67809
@@ -35,8 +37,8 @@ xxx = "H2S"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-H2S_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-H2S_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+H2S_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+H2S_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -52,8 +54,8 @@ xxx = "O2"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-O2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-O2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+O2_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+O2_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -69,8 +71,8 @@ xxx = "SO2"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-SO2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-SO2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+SO2_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+SO2_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -86,8 +88,8 @@ xxx = "H2O"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-H2O_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-H2O_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+H2O_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+H2O_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -103,8 +105,8 @@ xxx = "S2"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-S2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-S2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+S2_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+S2_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -120,8 +122,8 @@ xxx = "CH4"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-CH4_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-CH4_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+CH4_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+CH4_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -137,8 +139,8 @@ xxx = "CS2"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-CS2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-CS2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+CS2_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+CS2_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -151,11 +153,11 @@ F  = -118.0089
 H  = -110.5271
 dH = -110.53
 xxx = "CO"
-coeff = [A, B, C, D, E]
+coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-CO_coef_cp = poly_regres_cp(coeff, Trange, order)
-CO_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+CO_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+CO_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -171,8 +173,8 @@ xxx = "CO2"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-CO2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-CO2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+CO2_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+CO2_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -188,8 +190,8 @@ xxx = "COS"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-COS_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-COS_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+COS_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+COS_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -205,8 +207,8 @@ xxx = "NH3"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-NH3_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-NH3_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+NH3_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+NH3_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -221,8 +223,8 @@ xxx = "N2"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-N2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-N2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+N2_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+N2_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -238,8 +240,8 @@ xxx = "H2"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-H2_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-H2_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+H2_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+H2_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
 
 
@@ -255,7 +257,24 @@ xxx = "Ar"
 coef_cp = [A, B, C, D, E]
 coef_dH = [A, B, C, D, E, F, H, xxx]
 
-Ar_coef_cp = poly_regres_cp(coef_cp, Trange, order)
-Ar_coef_dH = poly_regres_dH(coef_dH, Trange, order)
+Ar_coef_cp = poly_regres_cp(coef_cp, Trange, order, plottt)
+Ar_coef_dH = poly_regres_dH(coef_dH, Trange, order, plottt)
 
+results = {
+	"H2S": [H2S_coef_cp, H2S_coef_dH],
+	"O2":  [O2_coef_cp,  O2_coef_dH],
+	"SO2": [SO2_coef_cp, SO2_coef_dH],
+	"H2O": [H2O_coef_cp, H2O_coef_dH],
+	"S2":  [S2_coef_cp,  S2_coef_dH],
+	"CH4": [CH4_coef_cp, CH4_coef_dH],
+	"CS2": [CS2_coef_cp, CS2_coef_dH],
+	"CO":  [CO_coef_cp,  CO_coef_dH],
+	"CO2": [CO2_coef_cp, CO2_coef_dH],
+	"COS": [COS_coef_cp, COS_coef_dH],
+	"NH3": [NH3_coef_cp, NH3_coef_dH],
+	"N2":  [N2_coef_cp,  N2_coef_dH],
+	"H2":  [H2_coef_cp,  H2_coef_dH],
+	"Ar":  [Ar_coef_cp,  Ar_coef_dH]
+}
 
+print(results)

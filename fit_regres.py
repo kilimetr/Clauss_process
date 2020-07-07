@@ -6,7 +6,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def poly_regres_cp(coeff_cp, Trange, order):
+def poly_regres_cp(coeff_cp, Trange, order, plottt):
 	T = np.linspace(Trange[0], Trange[1], Trange[2])
 
 	TT = T/1000 # NIST condition
@@ -24,16 +24,19 @@ def poly_regres_cp(coeff_cp, Trange, order):
 	print(cp_coeff)
 	print(cp_diff)
 
-	plt.figure(1)
-	plt.plot(T, cp_calc, T, cp_fit)
-	plt.legend(["NIST", "fitted"])
-	plt.show()
+	if plottt == True:
+		plt.figure(1)
+		plt.plot(T, cp_calc, T, cp_fit)
+		plt.legend(["NIST", "fitted"])
+		plt.show()
+	else:
+		pass
 
 	return cp_coeff
 
 
 
-def poly_regres_dH(coeff_dH, Trange, order):
+def poly_regres_dH(coeff_dH, Trange, order, plottt):
 	T = np.linspace(Trange[0], Trange[1], Trange[2])
 
 	TT = T/1000
@@ -51,10 +54,13 @@ def poly_regres_dH(coeff_dH, Trange, order):
 	print(dH_coeff)
 	print(dH_diff)
 
-	plt.figure(2)
-	plt.plot(T, dH_calc, T, dH_fit)
-	plt.legend(["NIST", "fitted"])
-	plt.show()
+	if plottt == True:
+		plt.figure(2)
+		plt.plot(T, dH_calc, T, dH_fit)
+		plt.legend(["NIST", "fitted"])
+		plt.show()
+	else:
+		pass
 
 	return dH_coeff
 
