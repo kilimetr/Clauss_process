@@ -53,13 +53,16 @@ print(dH_py.shape)
 drH_py_1 =     dH_py[:, 1] +   dH_py[:, 3] - (  dH_py[:, 0] + 3/2*dH_py[:,4])
 drH_py_2 = 3/2*dH_py[:, 2] + 2*dH_py[:, 3] - (2*dH_py[:, 0] +     dH_py[:,1])
 
-aaa = 1 + float(dHstd["H2S"])
-print(aaa)
-
 drHstd_py_2 = 3/2*dHstd["S2"] + 2*dHstd["H2O"] - (2*dHstd["H2S"] + dHstd["SO2"])
 drHstd_py_2 = drHstd_py_2 * 1000
 
 print(drHstd_py_2)
+
+dcp_1 =     cp_py[:, 1] +   cp_py[:, 3] - (  cp_py[:, 0] + 3/2*cp_py[:,4])
+dcp_2 = 3/2*cp_py[:, 2] + 2*cp_py[:, 3] - (2*cp_py[:, 0] +     cp_py[:,1])
+
+# drH_py_11 = 
+drH_py_22 = drHstd_py_2 + dcp_2
 
 
 # MATLAB
@@ -90,7 +93,7 @@ plt.plot(T, drH_m[:, 0], T, drH_py_1)
 plt.legend(["matlab", "python"])
 
 plt.subplot(2,1,2)
-plt.plot(T, drH_m[:, 1], T, drH_py_2)
+plt.plot(T, drH_m[:, 1], T, drH_py_2, T, drH_py_22)
 plt.legend(["matlab", "python"])
 plt.show()
 
